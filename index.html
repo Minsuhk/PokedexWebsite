@@ -23,38 +23,78 @@
 		<!-- The X-UA-Compatible header tells Internet Explorer to use the latest rendering engine available (edge) -->
 		<title>PokeCheck</title>
 		<!-- This is the title element that defines the title of the document shown in the browser tab -->
-    <link rel="stylesheet" href="css/style.css">
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			html {
+				font-family: sans-serif;
+			}
+
+			body {
+				font-size: 16px;
+				line-height: 1.5;
+			}
+
+			h1, h2, h3, h4, h5, h6 {
+				margin: 0;
+				padding: 0;
+			}
+
+			ul, ol {
+				list-style: none;
+			}
+
+			a {
+				text-decoration: none;
+			}
+		</style>
+		<link rel="stylesheet" href="css/style.css">
+		<script defer src="js/index.js"></script>
 	</head>
 	<body>
 		<!-- This is the body element that contains the visible content of the document -->
 		<header>
 			<!-- This is a header element that represents a container for introductory content or navigation links -->
-      <div class="top-box">
-        <div class="title-text">PokeCheck</div>
-        <div class="circle-menu">
-          <button class="menu-button">
-            <img src="assets/images/OptionsButton.png" alt="ButtonImage">
-          </button>
-          <ul class="menu-options">
-            <li><a href="#">Option 1</a></li>
-            <li><a href="#">Option 2</a></li>
-            <li><a href="#">Option 3</a></li>
-          </ul>   
-        </div>
-			<nav>
-				<!-- This is a nav element that represents a section with navigation links -->
-			</nav>
+      		<div class="top-box">
+				<div class="circle-menu">
+					<nav>
+						<!-- This is a nav element that represents a section with navigation links -->
+						<button class="menu-button">
+							<img src="assets/images/OptionsButton.png" alt="ButtonImage">
+						</button>
+						  <ul class="menu-options">
+							<li><a href="#">Option 1</a></li>
+							<li><a href="#">Option 2</a></li>
+							<li><a href="#">Option 3</a></li>
+						  </ul>  
+					</nav>
+				</div>
+        		<h1 id="title-text">PokeCheck</h1>	
+      </div>
 		</header>
-		<h1>Hello, World!</h1>
-		<!-- This is a heading element that displays a large text with a level of importance -->
-		<!-- There are six levels of headings from h1 to h6, with h1 being the most important and h6 being the least important -->
 		<main>
+			<section id="main-content">
+				<input type="text" id="search-input" placeholder="Enter Pokemon name">
+				<button id="search-button">Search</button>
+				<div id="result-container">
+					<img id="front-img"></img>
+				</div>
+			</section>
 			<!-- This is a main element that represents the main content of the document -->
-
 		</main>
-		<footer>
-			<!-- This is a footer element that represents a container for information at the end of the document or section -->
-      <div class="bottom-box">BOTTOM OF PAGE</div>
+		<footer class="bottom-box">
+			<p>Bottom Left Picture</p>
+			<!-- This is a footer element that represents a footer for the document or section -->
+			<ul id="footer-links">
+				<li class="footer-link">&copy; 2023 PokeCheck</li>
+				<li class="footer-link"><a href="">Check out the code here!</a></li>
+				<li class="footer-link"><a href="">Contact Us</a></li>
+			</ul>
+			<p>Bottom Right Picture</p>
 		</footer>
 	</body>
 </html>
