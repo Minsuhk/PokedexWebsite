@@ -70,13 +70,79 @@ main {
     border: 5px solid black;
 } */
 
+/* Background */
+
+body{
+    background-image: url("C:/Users/nayar/Desktop/ProjectWebsite/assets/images/blue.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center -20px;
+}
+
+/* Sliding Carousel */
+.container{
+    padding: 2rem;
+}
+.slider-wrapper{
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+.slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.threm hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.25rem;
+}
+.slider img{
+    flex: 0 0 50%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index:1;
+}
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+.slider-nav a:hover{
+    opacity: 1;
+}
+
+/* This is to capitalize the first letter of pokemon names */
+#result-container {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+/* This is to modify the given text that will be under the pokemon  */
+#description{
+    text-align: center;
+}
+
+/* This is to create the bottom of the page */
 .bottom-box {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-#footer-links {
+#footer-linkS {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -85,4 +151,67 @@ main {
 
 .footer-link {
     margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
+
+/* Button Carousel */
+.carousel {
+    position: relative;
+    display: none;
+    justify-content: center;
+}
+
+.carousel__item {
+    margin: 0 auto;
+    height: 150px;
+    padding: 1em;
+    /* background: rgb(228, 49, 174);
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    color: #ffffff; */
+    display: none; /* Keep this as `none` so all 4 sprites dont show */
+    background-image: url("C:/Users/nayar/Desktop/ProjectWebsite/assets/images/grass.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center -20px; 
+}
+  
+.carousel__item--selected {
+    display: block;
+}
+  
+.carousel__nav {
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+  
+.carousel__button {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+  
+.carousel__button--selected {
+    background: rgba(252, 252, 252, 1.0);
+}
+  
+/* Adjust the size of any logos to be smaller */
+.shrink-image {
+    width: 40px; /* Adjust to the desired width */
+    height: auto; /* Maintain aspect ratio */
+}
+  
+

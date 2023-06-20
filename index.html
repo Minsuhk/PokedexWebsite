@@ -77,22 +77,54 @@
       </div>
 		</header>
 		<main>
-			<section id="main-content">
-				<input type="text" id="search-input" placeholder="Enter Pokemon name">
-				<button id="search-button">Search</button>
-				<div id="result-container">
-					<img id="front-img"></img>
-				</div>
-			</section>
 			<!-- This is a main element that represents the main content of the document -->
+			<section id="main-content">
+				<input type="text" id="search-input" placeholder="Enter Pokemon name" oninput="convertToLowercase(this)">
+				<button id="search-button" onclick="toggleDisplay()" >Search</button>
+				<!-- <div id="result-container">
+					<img id="front-img"></img>
+				</div> -->
+			</section>
+			<p id="result-container"></p>
+			<!-- <section class="container">
+				<div class="slider-wrapper">
+					<div class="slider">
+						<img id="nfront-img"></img>
+						<img id="nback-img"></img>
+						<img id="sfront-img"></img>
+						<img id="sback-img"></img>
+					</div>
+					<div class="slider-nav">
+						<a href="nfront-img"></a>
+						<a href="nback-img"></a>
+						<a href="sfront-img"></a>
+						<a href="sback-img"></a>
+					</div>
+				</div>
+			</section> -->
+			<div class="carousel">
+				<div class="carousel__item"><img id="nfront-img"></img></div>
+				<div class="carousel__item"><img id="nback-img"></img></div>
+				<div class="carousel__item"><img id="sfront-img"></img></img></div>
+				<div class="carousel__item"><img id="sback-img"></img></img></div>
+			  </div>
+			<p id="description">TEST</p>
 		</main>
 		<footer class="bottom-box">
 			<p>Bottom Left Picture</p>
 			<!-- This is a footer element that represents a footer for the document or section -->
-			<ul id="footer-links">
+			<ul id="footer-linkS">
 				<li class="footer-link">&copy; 2023 PokeCheck</li>
-				<li class="footer-link"><a href="">Check out the code here!</a></li>
-				<li class="footer-link"><a href="">Contact Us</a></li>
+				<li class="footer-link">
+					<a href="https://github.com/Minsuhk/PokedexWebsite"> 
+						<img src="assets/images/github_logo.png" alt="GitHub Logo" class="shrink-image">
+					</a>
+				</li>
+				<li class="footer-link">
+					<a href="">
+						<img src="assets/images/email_logo.png" alt="Email Logo" class="shrink-image">
+					</a>
+				</li>
 			</ul>
 			<p>Bottom Right Picture</p>
 		</footer>
