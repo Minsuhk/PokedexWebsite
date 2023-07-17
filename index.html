@@ -52,6 +52,35 @@
 				text-decoration: none;
 			}
 		</style>
+		<style>
+			#main-content {
+				position: relative;
+			}
+
+			#autocomplete-list {
+				display: none;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				width: 100%;
+				z-index: 1;
+				background-color: #f9f9f9;
+				border: 1px solid #ccc;
+				border-top: none;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			#autocomplete-list li {
+				padding: 8px 12px;
+				cursor: pointer;
+			}
+
+			#autocomplete-list li:hover {
+				background-color: #e1e1e1;
+			}
+		</style>
 		<link rel="stylesheet" href="css/style.css">
 		<script defer src="js/index.js"></script>
 	</head>
@@ -81,6 +110,7 @@
 			<section id="main-content">
 				<input type="text" id="search-input" placeholder="Enter Pokemon name" oninput="convertToLowercase(this)">
 				<button id="search-button" onclick="toggleDisplay()" >Search</button>
+				<ul id="autocomplete-list"></ul>
 				<!-- <div id="result-container">
 					<img id="front-img"></img>
 				</div> -->
